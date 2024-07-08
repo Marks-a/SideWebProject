@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+            <form action="#">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" id="submit-but">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        // This is the contact.js script!
+        document.addEventListener("DOMContentLoaded", function () {
+            var submitButton = document.getElementById('submit-but');
+            submitButton.addEventListener('click', function (event) {
+                alert("Sorry! SMTP protocol not workin!");
+                event.preventDefault();
+            });
+        });
+    </script>
+</body>
+
+</html>

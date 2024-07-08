@@ -1,0 +1,58 @@
+/* Main of light mode*/
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --header-background-color: #333;
+    --header-text-color: #fff;
+    --ghost-letters:rgba(65, 56, 65, 0.5);
+}
+/* Main of Dark mode */
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #080808;
+        --text-color: #745d33;
+        --header-background-color: #e08a39;
+        --header-text-color: #f4f4f4;
+        --ghost-letters:#afb5ce;
+    }
+} */
+/* If media does not work */
+body.night-mode {
+        --background-color: #080808;
+        --text-color: #745d33;
+        /* --header-background-color: #1f1f1f; */
+        --header-background-color: #e08a39;
+        --header-text-color: #f4f4f4;
+        --ghost-letters:#afb5ce;
+}
+
+
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Portfolio section container */
+.Section-container {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    scale: 100%;    
+    align-items: center;
+    /* margin-top: 420px; */
+}
+section {
+    padding: 60px 0;
+} 
+
+section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+section p {
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.5;
+} 
