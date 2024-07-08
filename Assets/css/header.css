@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap");
+/* ====================================== */
+/* Button switch */
+.D_N_Switch {
+    display: block;
+    background-color: #1582fe;
+    position:relative;
+    cursor: pointer;
+    outline: auto;
+    outline-width: 40px;
+    outline-color: #0470fe;
+}
+
+
+/* ====================================== */
+/* Main header */
+header {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+}
+
+/*  Changes the color of the $.container  */
+/* header .container {
+   outline-offset: 40px;
+  outline-width: 40px;
+  outline-style: dashed;
+  outline-color: aqua;
+} */
+
+/* Header nav display the positioning */
+header nav {
+    align-items: center;
+    display: block;
+}
+
+/* H1 look */
+header nav h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color:var(--text-color);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 30%;
+  }
+
+/* ====================================== */
+  /* li and a look*/
+  header nav ul {
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-right: 50px;
+}
+header nav ul li {
+    list-style: none;
+    text-align: center;
+}
+/* How %a elements look */
+header nav ul li a {
+    color:var(--text-color);
+     text-decoration: none;
+     font-size: 3em;
+     display: inline-flex;
+     font-weight: 700;
+     transition: 0.5s;
+}
+
+/* ====================================== */
+/* Element animations */
+header nav ul:hover li a {
+    /* Basic coloring when howoring over all */
+    color:var(--text-color);
+    /* color: red;  */
+}
+/* When selection specifically section */
+header nav ul li:hover a {
+    color:var(--text-color);
+    /* color: red; */
+    background: transparent;
+    font-size: 420%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+/* The ghost letters :D */
+header ul li a:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 40%; 
+    /* left was 40% */
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0; 
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 100px;
+    transition: letter-spacing 0.5s, left 0.5s;
+    /* Correction of the letter location */
+    margin-left: 15%;
+  }
+  /* The ghost letters color and text configuration */
+  header nav ul li a:hover::before {
+  content: attr(data-text);
+  /* opacity: 1; */
+  /* left: 50%; */
+  align-items: center;
+  letter-spacing: 10px;
+  width: 1500px;
+  height: 1500px;
+  color: var(--ghost-letters);
+  animation: ghostLet 2s forwards;
+}
+
+/* The background colors of the hovered items */
+ul li:nth-child(6n + 1) a:before {
+    background: #0470fe;
+  }
+  ul li:nth-child(6n + 2) a:before {
+    background: #ff7675; 
+  }
+  ul li:nth-child(6n + 3) a:before {
+    background: #1582fe;
+  }
+  ul li:nth-child(6n + 4) a:before {
+    background: #a29bfe;
+  }
+  ul li:nth-child(6n + 5) a:before {
+    background: #fd79a8;
+  }
+  ul li:nth-child(6n + 6) a:before {
+    background: #ffeaa7;
+  }
+@keyframes ghostLet {
+    0% {opacity:0;}
+    100% {opacity: 1;}
+}

@@ -1,0 +1,3 @@
+<center><h1>Hello!</h1>
+<p>This text is written and shows using AJAX Technique!</p>
+</center>

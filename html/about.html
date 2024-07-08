@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+</head>
+<body>
+<section id="about">
+    <div class="Section-container">
+        <h2>About Me</h2>
+        <p>Hello! I'm a web developer with a passion for creating stuff!</p>
+        <div id="text_content" class="txt_content">
+        </div>
+        <script data-load-content="text_content" data-file="/assets/txt/about.txt">
+       async function loadContent() {
+                const contentDiv = document.getElementById('text_content');
+                try {
+                    const response = await fetch('/assets/txt/about.txt');
+                    if (!response.ok) throw new Error("Unable to get response");
+                    let text = await response.text();
+                    text = text.replace(/\n/g, '<br>');
+                    contentDiv.innerHTML = text;
+                } catch (error) {
+                    contentDiv.textContent = "Some Error before loading or after";
+                    console.log('Message: Failed in about.txt script', error);
+                }
+            }
+            document.addEventListener("DOMContentLoaded", loadContent);
+
+        </script>
+    </div>
+</section>
+</body>
+</html>

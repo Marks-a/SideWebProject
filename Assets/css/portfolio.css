@@ -1,0 +1,21 @@
+/* Porfolio,funGame and stuff */
+#portfolio .gallery {
+    display:block;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+#portfolio .gallery-item {
+    /* width: 45%; */
+    background: #f4f4f4;
+     margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: var( --text-color);
+}
+#portfolio .gallery-item .fixed-color {
+   color: black;
+}

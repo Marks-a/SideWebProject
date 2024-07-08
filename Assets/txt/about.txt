@@ -1,0 +1,2 @@
+This is a simple test for loading about.txt file
+This if tile 
